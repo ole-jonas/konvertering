@@ -10,7 +10,10 @@ ul {
   display: flex;
   flex-direction: column;
 }
-
+#result {
+  border: solid 1px 1px 1px 1px black;
+  background-color: aliceblue;
+}
 body {
   margin: 0;
   font-family: system-ui, sans-serif;

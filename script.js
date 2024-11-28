@@ -1,17 +1,14 @@
-const konverteringButton = document.querySelector('#konverter-button')
-
-const numberInput = document.querySelector("#number")
-
-function konvertering (event) {
-    event.preventDefault() 
+document.getElementById('konverter-button').addEventListener('click', function() {
+  const inches = document.getElementById('number').value;
   
-    const number = numberInput.value
-  
-    const cm = number * 2.54
-  
-    konverteringButton.textContent = number + " Tommer = " + cm + " Cm"
-  
+  if (inches) {
+    // Convert inches to centimeters (1 inch = 2.54 cm)
+    const centimeters = (inches * 2.54).toFixed(2);
+    
+    // Display the result
+    document.getElementById('result').textContent = `${inches} tommer er lik ${centimeters} cm.`;
+    document.getElementById('result-container').style.display = 'block';
+  } else {
+    alert('Vennligst skriv inn et gyldig nummer.');
   }
-  
-  konverteringButton.addEventListener("click", konvertering)
-  submitBtn.addEventListener('click', submit);
+});
