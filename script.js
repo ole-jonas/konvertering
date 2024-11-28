@@ -7,9 +7,9 @@ function konvertering (event) {
   
     const number = numberInput.value
   
-    const feet = number * 3.2
+    const cm = number * 2.54
   
-    konverteringButton.textContent = number + " meter = " + feet + " feet"
+    konverteringButton.textContent = number + " Tommer = " + cm + " Cm"
   
   }
   
